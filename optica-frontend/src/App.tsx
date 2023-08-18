@@ -1,13 +1,17 @@
 import { Refine } from "@refinedev/core";
 import { RefineKbarProvider } from "@refinedev/kbar";
 
-import { ErrorComponent, ThemedLayoutV2, notificationProvider } from "@refinedev/antd";
+import {
+  ErrorComponent,
+  ThemedLayoutV2,
+  notificationProvider,
+} from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
 
 import routerBindings, {
   DocumentTitleHandler,
   UnsavedChangesNotifier,
-  NavigateToResource
+  NavigateToResource,
 } from "@refinedev/react-router-v6";
 import dataProvider from "@refinedev/simple-rest";
 import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
@@ -15,7 +19,12 @@ import { ColorModeContextProvider } from "./contexts/color-mode";
 import { AntdInferencer } from "@refinedev/inferencer/antd";
 import "@refinedev/antd/dist/reset.css";
 
-import { CustomerList, CustomerEdit, CustomerShow, CustomerCreate } from "pages/customer"
+import {
+  CustomerList,
+  CustomerEdit,
+  CustomerShow,
+  CustomerCreate,
+} from "pages/customer";
 
 function App() {
   return (
