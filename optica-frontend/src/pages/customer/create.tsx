@@ -1,10 +1,10 @@
 import React from "react";
 import { IResourceComponentsProps } from "@refinedev/core";
 import { Create, useForm } from "@refinedev/antd";
-import { Form, Input } from "antd";
+import { DatePicker, Form, Input } from "antd";
 
 export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
-  const { formProps, saveButtonProps, queryResult } = useForm();
+  const { formProps, saveButtonProps } = useForm();
 
   return (
     <Create saveButtonProps={saveButtonProps}>
@@ -43,6 +43,28 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
           <Input />
         </Form.Item>
         <Form.Item
+          label="Date"
+          name={["date"]}
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <DatePicker style={{ width: "100%" }} format="DD-MM-YYYY" />
+        </Form.Item>
+        <Form.Item
+          label="Fecha prometida"
+          name={["targetDate"]}
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <DatePicker style={{ width: "100%" }} format="DD-MM-YYYY" />
+        </Form.Item>
+        <Form.Item
           label="Doctor"
           name={["doctor"]}
           rules={[
@@ -56,6 +78,17 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
         <Form.Item
           label="Health Care"
           name={["healthCare"]}
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          label="Health Care Id"
+          name={["healthCareId"]}
           rules={[
             {
               required: true,

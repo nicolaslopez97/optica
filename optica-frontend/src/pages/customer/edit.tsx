@@ -1,12 +1,11 @@
 import React from "react";
 import { IResourceComponentsProps } from "@refinedev/core";
 import { Edit, useForm } from "@refinedev/antd";
-import { Form, Input } from "antd";
+import { DatePicker, Form, Input } from "antd";
+import dayjs from "dayjs";
 
 export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
-  const { formProps, saveButtonProps, queryResult } = useForm();
-
-  const customerData = queryResult?.data?.data;
+  const { formProps, saveButtonProps } = useForm();
 
   return (
     <Edit saveButtonProps={saveButtonProps}>
@@ -21,6 +20,34 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
           ]}
         >
           <Input readOnly disabled />
+        </Form.Item>
+        <Form.Item
+          label="Date"
+          name={["date"]}
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+          getValueProps={(value) => ({
+            value: value ? dayjs(value) : "",
+          })}
+        >
+          <DatePicker style={{ width: "100%" }} format="DD-MM-YYYY" />
+        </Form.Item>
+        <Form.Item
+          label="Fecha prometida"
+          name={["targetDate"]}
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+          getValueProps={(value) => ({
+            value: value ? dayjs(value) : "",
+          })}
+        >
+          <DatePicker style={{ width: "100%" }} format="DD-MM-YYYY" />
         </Form.Item>
         <Form.Item
           label="Far ODEsf"

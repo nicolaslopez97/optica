@@ -5,8 +5,8 @@ import {
   List,
   EditButton,
   ShowButton,
-  TagField,
   DeleteButton,
+  DateField,
 } from "@refinedev/antd";
 import { Table, Space } from "antd";
 
@@ -18,35 +18,26 @@ export const CustomerList: React.FC<IResourceComponentsProps> = () => {
   return (
     <List>
       <Table {...tableProps} rowKey="id">
-        <Table.Column dataIndex="id" title="Id" />
-        <Table.Column dataIndex="name" title="Name" />
-        <Table.Column dataIndex="lastName" title="Last Name" />
-        <Table.Column dataIndex="phone" title="Phone" />
+        <Table.Column dataIndex="name" title="Nombre" />
+        <Table.Column dataIndex="lastName" title="Apellido" />
+        <Table.Column dataIndex="phone" title="Telefono" />
         <Table.Column
           dataIndex="date"
-          title="Date"
-          render={(value: any[]) => (
-            <>
-              {value?.map((item) => (
-                <TagField value={item} key={item} />
-              ))}
-            </>
-          )}
+          title="Fecha"
+          render={(value) =>
+            value && <DateField value={value} format="DD-MM-YYYY" />
+          }
         />
         <Table.Column
           dataIndex="targetDate"
-          title="Target Date"
-          render={(value: any[]) => (
-            <>
-              {value?.map((item) => (
-                <TagField value={item} key={item} />
-              ))}
-            </>
-          )}
+          title="Fecha Prometida"
+          render={(value) =>
+            value && <DateField value={value} format="DD-MM-YYYY" />
+          }
         />
-        <Table.Column dataIndex="doctor" title="Doctor" />
-        <Table.Column dataIndex="healthCare" title="Health Care" />
-
+        <Table.Column dataIndex="doctor" title="Receta Doctor" />
+        <Table.Column dataIndex="healthCare" title="Obra Social" />
+        <Table.Column dataIndex="healthCareId" title="Afiliado Nro" />
         <Table.Column dataIndex="farODEsf" title="Far ODEsf" />
         <Table.Column dataIndex="farOIEsf" title="Far OIEsf" />
         <Table.Column dataIndex="farColor" title="Far Color" />

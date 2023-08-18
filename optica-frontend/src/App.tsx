@@ -16,7 +16,6 @@ import routerBindings, {
 import dataProvider from "@refinedev/simple-rest";
 import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import { ColorModeContextProvider } from "./contexts/color-mode";
-import { AntdInferencer } from "@refinedev/inferencer/antd";
 import "@refinedev/antd/dist/reset.css";
 
 import {
