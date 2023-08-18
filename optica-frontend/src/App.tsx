@@ -15,6 +15,8 @@ import { ColorModeContextProvider } from "./contexts/color-mode";
 import { AntdInferencer } from "@refinedev/inferencer/antd";
 import "@refinedev/antd/dist/reset.css";
 
+import { CustomerList, CustomerEdit, CustomerShow, CustomerCreate } from "pages/customer"
+
 function App() {
   return (
     <BrowserRouter>
@@ -52,10 +54,10 @@ function App() {
                   element={<NavigateToResource resource="customer" />}
                 />
                 <Route path="customer">
-                  <Route index element={<AntdInferencer />} />
-                  <Route path="show/:id" element={<AntdInferencer />} />
-                  <Route path="edit/:id" element={<AntdInferencer />} />
-                  <Route path="create" element={<AntdInferencer />} />
+                  <Route index element={<CustomerList />} />
+                  <Route path="show/:id" element={<CustomerShow />} />
+                  <Route path="edit/:id" element={<CustomerEdit />} />
+                  <Route path="create" element={<CustomerCreate />} />
                 </Route>
                 <Route path="*" element={<ErrorComponent />} />
               </Route>
