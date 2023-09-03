@@ -35,19 +35,7 @@ export const CustomerList: React.FC<IResourceComponentsProps> = () => {
             value && <DateField value={value} format="DD-MM-YYYY" />
           }
         />
-        <Table.Column dataIndex="doctor" title="Receta Doctor" />
         <Table.Column dataIndex="healthCare" title="Obra Social" />
-        <Table.Column dataIndex="healthCareId" title="Afiliado Nro" />
-        <Table.Column dataIndex="farODEsf" title="Far ODEsf" />
-        <Table.Column dataIndex="farOIEsf" title="Far OIEsf" />
-        <Table.Column dataIndex="farColor" title="Far Color" />
-        <Table.Column dataIndex="farFrame" title="Far Frame" />
-        <Table.Column dataIndex="closeODEsf" title="Close ODEsf" />
-        <Table.Column dataIndex="closeOIEsf" title="Close OIEsf" />
-        <Table.Column dataIndex="closeColor" title="Close Color" />
-        <Table.Column dataIndex="closeFrame" title="Close Frame" />
-        <Table.Column dataIndex="bifocal" title="Bifocal" />
-        <Table.Column dataIndex="notes" title="Notes" />
         <Table.Column
           title="Actions"
           dataIndex="actions"

@@ -1,7 +1,7 @@
 import React from "react";
 import { IResourceComponentsProps, useShow } from "@refinedev/core";
 import { Show, NumberField, TagField, TextField } from "@refinedev/antd";
-import { Typography } from "antd";
+import { Card, Col, Row, Typography } from "antd";
 
 const { Title } = Typography;
 
@@ -13,27 +13,32 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 
   return (
     <Show isLoading={isLoading}>
-      <Title level={5}>Id</Title>
-      <NumberField value={record?.id ?? ""} />
-      <Title level={5}>Name</Title>
-      <TextField value={record?.name} />
-      <Title level={5}>Last Name</Title>
-      <TextField value={record?.lastName} />
-      <Title level={5}>Phone</Title>
-      <NumberField value={record?.phone ?? ""} />
-      <Title level={5}>Date</Title>
-      {record?.date?.map((item: any) => (
-        <TagField value={item} key={item} />
-      ))}
-      <Title level={5}>Target Date</Title>
-      {record?.targetDate?.map((item: any) => (
-        <TagField value={item} key={item} />
-      ))}
-      <Title level={5}>Doctor</Title>
-      <TextField value={record?.doctor} />
-      <Title level={5}>Health Care</Title>
-      <TextField value={record?.healthCare} />
-      <Title level={5}>Far ODEsf</Title>
+
+      <Row gutter={[64,64]}>
+        <Col xl={12}>
+          <Title level={5}>Id</Title>
+        <NumberField value={record?.id ?? ""} />
+        <Title level={5}>Name</Title>
+        <TextField value={record?.name} />
+        <Title level={5}>Last Name</Title>
+        <TextField value={record?.lastName} />
+        <Title level={5}>Phone</Title>
+        <NumberField value={record?.phone ?? ""} />
+        <Title level={5}>Date</Title>
+        {record?.date?.map((item: any) => (
+          <TagField value={item} key={item} />
+        ))}
+        <Title level={5}>Target Date</Title>
+        {record?.targetDate?.map((item: any) => (
+          <TagField value={item} key={item} />
+        ))}
+        <Title level={5}>Doctor</Title>
+        <TextField value={record?.doctor} />
+        <Title level={5}>Health Care</Title>
+        <TextField value={record?.healthCare} />
+        </Col>
+        <Col xl={12}>
+        <Title level={5}>Far ODEsf</Title>
       <NumberField value={record?.farODEsf ?? ""} />
       <Title level={5}>Far OIEsf</Title>
       <NumberField value={record?.farOIEsf ?? ""} />
@@ -51,8 +56,16 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
       <TextField value={record?.closeFrame} />
       <Title level={5}>Bifocal</Title>
       <TextField value={record?.bifocal} />
-      <Title level={5}>Notes</Title>
+        </Col>
+        <Col xl={24}>
+        <Card>
+        <Title level={5}>Notes</Title>
       <TextField value={record?.notes} />
+        </Card>
+        </Col>
+      </Row>
+      
+      
     </Show>
   );
 };

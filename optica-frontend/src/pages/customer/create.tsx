@@ -1,7 +1,7 @@
 import React from "react";
 import { IResourceComponentsProps } from "@refinedev/core";
 import { Create, useForm } from "@refinedev/antd";
-import { DatePicker, Form, Input } from "antd";
+import { DatePicker, Form, Input, Select } from "antd";
 
 export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
   const { formProps, saveButtonProps } = useForm();
@@ -10,7 +10,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
     <Create saveButtonProps={saveButtonProps}>
       <Form {...formProps} layout="vertical">
         <Form.Item
-          label="Name"
+          label="Nombre"
           name={["name"]}
           rules={[
             {
@@ -21,7 +21,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Last Name"
+          label="Apellido"
           name={["lastName"]}
           rules={[
             {
@@ -32,7 +32,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Phone"
+          label="Telefono"
           name={["phone"]}
           rules={[
             {
@@ -43,7 +43,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Date"
+          label="Fecha"
           name={["date"]}
           rules={[
             {
@@ -76,7 +76,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Health Care"
+          label="Obra Social"
           name={["healthCare"]}
           rules={[
             {
@@ -84,10 +84,16 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
             },
           ]}
         >
-          <Input />
+          <Select options={
+              [
+                {label: "OSDE", value: "osde"},
+                {label: "Swiss Medical", value: "swiss medical"},
+                {label: "UTHGRA", value: "uthgra"}
+              ]
+          } optionLabelProp="label" optionFilterProp="label" filterOption showSearch/>
         </Form.Item>
         <Form.Item
-          label="Health Care Id"
+          label="Nro Afiliado"
           name={["healthCareId"]}
           rules={[
             {
@@ -98,7 +104,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Far ODEsf"
+          label="O.D. Esferico [Lejos]"
           name={["farODEsf"]}
           rules={[
             {
@@ -109,7 +115,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
           <Input />
         </Form.Item>
         <Form.Item
-          label="Far OIEsf"
+          label="O.I. Esferico [Lejos]"
           name={["farOIEsf"]}
           rules={[
             {

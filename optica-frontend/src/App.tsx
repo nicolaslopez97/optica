@@ -17,6 +17,7 @@ import dataProvider from "@refinedev/simple-rest";
 import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 import "@refinedev/antd/dist/reset.css";
+import { AntdInferencer } from "@refinedev/inferencer/antd";
 
 import {
   CustomerList,
@@ -62,7 +63,7 @@ function App() {
                   element={<NavigateToResource resource="customer" />}
                 />
                 <Route path="customer">
-                  <Route index element={<CustomerList />} />
+                  <Route index element={< CustomerList />} />
                   <Route path="show/:id" element={<CustomerShow />} />
                   <Route path="edit/:id" element={<CustomerEdit />} />
                   <Route path="create" element={<CustomerCreate />} />
