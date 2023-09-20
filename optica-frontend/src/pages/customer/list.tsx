@@ -9,7 +9,7 @@ import {
 	DateField,
 	CreateButton,
 } from "@refinedev/antd";
-import { Table, Space, Button } from "antd";
+import { Table, Space } from "antd";
 import { UserAddOutlined } from "@ant-design/icons";
 
 export const CustomerList: React.FC<IResourceComponentsProps> = () => {

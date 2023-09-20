@@ -30,7 +30,7 @@ function App() {
 	const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/admin">
 			<ConfigProvider
 				theme={{
 					algorithm:
@@ -42,7 +42,7 @@ function App() {
 				<Refine
 					notificationProvider={notificationProvider}
 					routerProvider={routerBindings}
-					dataProvider={dataProvider("http://localhost:8080/api")}
+					dataProvider={dataProvider("http://localhost:8089/api")}
 					options={{
 						syncWithLocation: true,
 						warnWhenUnsavedChanges: true,
@@ -63,6 +63,7 @@ function App() {
 						<Route
 							element={
 								<ThemedLayoutV2
+									Sider={()=><></>}
 									Header={() => (
 										<Header
 											theme={currentTheme}

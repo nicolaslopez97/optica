@@ -1,4 +1,4 @@
-import { Space, Button, Typography } from "antd";
+import { Space, Button } from "antd";
 
 const IconSun = () => (
   <svg
@@ -49,9 +49,6 @@ const Header: React.FC<HeaderProps> = (props) => {
       <Space
           direction="vertical"
           align="end"
-          style={{
-              padding: "1rem",
-          }}
       >
           <Button
               onClick={() => {

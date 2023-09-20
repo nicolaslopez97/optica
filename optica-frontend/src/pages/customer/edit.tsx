@@ -1,19 +1,11 @@
 import React from "react";
 import { IResourceComponentsProps } from "@refinedev/core";
 import { Edit, useForm } from "@refinedev/antd";
-import {
-	Col,
-	DatePicker,
-	Divider,
-	Form,
-	Input,
-	InputNumber,
-	Row,
-} from "antd";
+import { Col, DatePicker, Divider, Form, Input, InputNumber, Row } from "antd";
 import dayjs from "dayjs";
 
 export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
-	const { formProps, saveButtonProps } = useForm();
+	const { formProps, form, saveButtonProps } = useForm();
 
 	return (
 		<Edit
@@ -34,7 +26,19 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 								},
 							]}
 						>
-							<Input maxLength={40} />
+							<Input
+								maxLength={40}
+								onChange={(e) => {
+									const array =
+										e.currentTarget.value.split(" ");
+									for (var i = 0; i < array.length; i++) {
+										array[i] =
+											array[i].charAt(0).toUpperCase() +
+											array[i].slice(1);
+									}
+									form.setFieldValue("name", array.join(" "));
+								}}
+							/>
 						</Form.Item>
 						<Form.Item
 							label="Apellido"
@@ -46,7 +50,19 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 								},
 							]}
 						>
-							<Input maxLength={40} />
+							<Input
+								maxLength={40}
+								onChange={(e) => {
+									const array =
+										e.currentTarget.value.split(" ");
+									for (var i = 0; i < array.length; i++) {
+										array[i] =
+											array[i].charAt(0).toUpperCase() +
+											array[i].slice(1);
+									}
+									form.setFieldValue("lastName", array.join(" "));
+								}}
+							/>
 						</Form.Item>
 						<Form.Item
 							label="Teléfono"
@@ -110,7 +126,15 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<Input maxLength={80} />
 						</Form.Item>
 						<Form.Item label="Obra Social" name={["healthCare"]}>
-							<Input maxLength={80} />
+							<Input
+								maxLength={40}
+								onChange={(e) => {
+									formProps.form?.setFieldValue(
+										"healthCare",
+										e.target.value.toUpperCase()
+									);
+								}}
+							/>
 						</Form.Item>
 						<Form.Item label="Nro Afiliado" name={["healthCareId"]}>
 							<Input maxLength={40} />
@@ -311,17 +335,12 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 						</Form.Item>
 					</Col>
 				</Row>
-				<Divider></Divider>
+				<Divider>Observaciones</Divider>
 				<Row>
 					<Col flex={1}>
 						<Form.Item label="Metalizado" name={["metallic"]}>
 							<Input />
 						</Form.Item>
-					</Col>
-				</Row>
-				<Divider></Divider>
-				<Row>
-					<Col flex={1}>
 						<Form.Item label="Notes" name={["notes"]}>
 							<Input.TextArea
 								autoSize={{ minRows: 3, maxRows: 5 }}

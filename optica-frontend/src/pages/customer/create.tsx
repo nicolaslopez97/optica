@@ -1,15 +1,7 @@
 import React from "react";
 import { IResourceComponentsProps } from "@refinedev/core";
 import { Create, useForm } from "@refinedev/antd";
-import {
-	Col,
-	DatePicker,
-	Divider,
-	Form,
-	Input,
-	InputNumber,
-	Row,
-} from "antd";
+import { Col, DatePicker, Divider, Form, Input, InputNumber, Row } from "antd";
 
 export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 	const { formProps, saveButtonProps } = useForm();
@@ -304,17 +296,12 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 						</Form.Item>
 					</Col>
 				</Row>
-				<Divider></Divider>
+				<Divider>Observaciones</Divider>
 				<Row>
 					<Col flex={1}>
 						<Form.Item label="Metalizado" name={["metallic"]}>
 							<Input />
 						</Form.Item>
-					</Col>
-				</Row>
-				<Divider></Divider>
-				<Row>
-					<Col flex={1}>
 						<Form.Item label="Notes" name={["notes"]}>
 							<Input.TextArea
 								autoSize={{ minRows: 3, maxRows: 5 }}
