@@ -1,219 +1,328 @@
 import React from "react";
 import { IResourceComponentsProps } from "@refinedev/core";
 import { Create, useForm } from "@refinedev/antd";
-import { DatePicker, Form, Input, Select } from "antd";
+import {
+	Col,
+	DatePicker,
+	Divider,
+	Form,
+	Input,
+	InputNumber,
+	Row,
+} from "antd";
 
 export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
-  const { formProps, saveButtonProps } = useForm();
+	const { formProps, saveButtonProps } = useForm();
 
-  return (
-    <Create saveButtonProps={saveButtonProps}>
-      <Form {...formProps} layout="vertical">
-        <Form.Item
-          label="Nombre"
-          name={["name"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Apellido"
-          name={["lastName"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Telefono"
-          name={["phone"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Fecha"
-          name={["date"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <DatePicker style={{ width: "100%" }} format="DD-MM-YYYY" />
-        </Form.Item>
-        <Form.Item
-          label="Fecha prometida"
-          name={["targetDate"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <DatePicker style={{ width: "100%" }} format="DD-MM-YYYY" />
-        </Form.Item>
-        <Form.Item
-          label="Doctor"
-          name={["doctor"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Obra Social"
-          name={["healthCare"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Select options={
-              [
-                {label: "OSDE", value: "osde"},
-                {label: "Swiss Medical", value: "swiss medical"},
-                {label: "UTHGRA", value: "uthgra"}
-              ]
-          } optionLabelProp="label" optionFilterProp="label" filterOption showSearch/>
-        </Form.Item>
-        <Form.Item
-          label="Nro Afiliado"
-          name={["healthCareId"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="O.D. Esferico [Lejos]"
-          name={["farODEsf"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="O.I. Esferico [Lejos]"
-          name={["farOIEsf"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Far Color"
-          name={["farColor"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Far Frame"
-          name={["farFrame"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Close ODEsf"
-          name={["closeODEsf"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Close OIEsf"
-          name={["closeOIEsf"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Close Color"
-          name={["closeColor"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Close Frame"
-          name={["closeFrame"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Bifocal"
-          name={["bifocal"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Notes"
-          name={["notes"]}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-      </Form>
-    </Create>
-  );
+	return (
+		<Create
+			breadcrumb={false}
+			saveButtonProps={saveButtonProps}
+			title="Agregar Cliente"
+		>
+			<Form {...formProps} layout="vertical">
+				<Row gutter={[32, 16]}>
+					<Col flex={3}>
+						<Form.Item
+							label="Nombre"
+							name={["name"]}
+							rules={[
+								{
+									required: true,
+									message: "El campo Nombre es obligatorio",
+								},
+							]}
+						>
+							<Input maxLength={40} />
+						</Form.Item>
+						<Form.Item
+							label="Apellido"
+							name={["lastName"]}
+							rules={[
+								{
+									required: true,
+									message: "El campo Apellido es obligatorio",
+								},
+							]}
+						>
+							<Input maxLength={40} />
+						</Form.Item>
+						<Form.Item
+							label="Teléfono"
+							name={["phone"]}
+							rules={[
+								{
+									required: true,
+									message: "El campo Teléfono es obligatorio",
+								},
+							]}
+						>
+							<Input maxLength={40} />
+						</Form.Item>
+					</Col>
+					<Col flex={2}>
+						<Form.Item
+							label="Fecha"
+							name={["date"]}
+							rules={[
+								{
+									required: true,
+									message: "El campo Fecha es obligatorio",
+								},
+							]}
+						>
+							<DatePicker
+								placeholder="Seleccione una fecha"
+								style={{ width: "100%" }}
+								format="DD-MM-YYYY"
+							/>
+						</Form.Item>
+						<Form.Item
+							label="Fecha prometida"
+							name={["targetDate"]}
+							rules={[
+								{
+									required: true,
+									message:
+										"El campo Fecha prometida es obligatorio",
+								},
+							]}
+						>
+							<DatePicker
+								placeholder="Seleccione una fecha"
+								style={{ width: "100%" }}
+								format="DD-MM-YYYY"
+							/>
+						</Form.Item>
+					</Col>
+				</Row>
+				<Divider></Divider>
+				<Row gutter={[32, 16]}>
+					<Col flex={5}>
+						<Form.Item label="Receta Dr" name={["doctor"]}>
+							<Input maxLength={80} />
+						</Form.Item>
+						<Form.Item label="Obra Social" name={["healthCare"]}>
+							<Input maxLength={80} />
+						</Form.Item>
+						<Form.Item label="Nro Afiliado" name={["healthCareId"]}>
+							<Input maxLength={40} />
+						</Form.Item>
+					</Col>
+				</Row>
+				<Divider>Lejos</Divider>
+				<Row gutter={[32, 16]}>
+					<Col span={5}>
+						<Form.Item label="O.D. Esf." name={["farODEsf"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Cil" name={["farODCil"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Ángulo" name={["farODAngle"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col flex={1}>
+						<Form.Item label="Color" name={["farColor"]}>
+							<Input />
+						</Form.Item>
+					</Col>
+					<Col flex={1}>
+						<Form.Item label="DI" name={["farDI"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+				</Row>
+				<Row gutter={[32, 16]}>
+					<Col span={5}>
+						<Form.Item label="O.I. Esf" name={["farOIEsf"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Cil" name={["farOICil"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Ángulo" name={["farOIAngle"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={9}>
+						<Form.Item label="Armazón" name={["farFrame"]}>
+							<Input />
+						</Form.Item>
+					</Col>
+				</Row>
+
+				<Divider>Cerca</Divider>
+				<Row gutter={[32, 16]}>
+					<Col span={5}>
+						<Form.Item label="O.D. Esf." name={["closeODEsf"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Cil" name={["closeODCil"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Ángulo" name={["closeODAngle"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col flex={1}>
+						<Form.Item label="Color" name={["closeColor"]}>
+							<Input />
+						</Form.Item>
+					</Col>
+					<Col flex={1}>
+						<Form.Item label="DI" name={["closeDI"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+				</Row>
+				<Row gutter={[32, 16]}>
+					<Col span={5}>
+						<Form.Item label="O.I. Esf" name={["closeOIEsf"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Cil" name={["closeOICil"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={5}>
+						<Form.Item label="Ángulo" name={["closeOIAngle"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col span={9}>
+						<Form.Item label="Armazón" name={["closeFrame"]}>
+							<Input />
+						</Form.Item>
+					</Col>
+				</Row>
+				<Divider>Bifocal</Divider>
+				<Row gutter={[32, 16]}>
+					<Col flex={1}>
+						<Form.Item label="Bifocal" name={["bifocal"]}>
+							<Input />
+						</Form.Item>
+					</Col>
+					<Col flex={1}>
+						<Form.Item label="Altura" name={["height"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+				</Row>
+				<Row gutter={[32, 16]}>
+					<Col flex={1}>
+						<Form.Item label="DI Lejos" name={["farBifocalDI"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+					<Col flex={1}>
+						<Form.Item label="DI Cerca" name={["closeBifocalDI"]}>
+							<InputNumber
+								style={{ width: "100%" }}
+								defaultValue="0"
+								precision={3}
+							/>
+						</Form.Item>
+					</Col>
+				</Row>
+				<Divider></Divider>
+				<Row>
+					<Col flex={1}>
+						<Form.Item label="Metalizado" name={["metallic"]}>
+							<Input />
+						</Form.Item>
+					</Col>
+				</Row>
+				<Divider></Divider>
+				<Row>
+					<Col flex={1}>
+						<Form.Item label="Notes" name={["notes"]}>
+							<Input.TextArea
+								autoSize={{ minRows: 3, maxRows: 5 }}
+							/>
+						</Form.Item>
+					</Col>
+				</Row>
+			</Form>
+		</Create>
+	);
 };
