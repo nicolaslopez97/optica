@@ -34,7 +34,7 @@ public class CustomerController {
     }
 
     @PatchMapping("{id}")
-    public void updateCustomerById(@PathVariable Long id, CustomerRequestDTO customerDTO){
+    public void updateCustomerById(@PathVariable Long id, @RequestBody CustomerRequestDTO customerDTO){
         customerService.updateCustomer(id, customerDTO);
     }
 
