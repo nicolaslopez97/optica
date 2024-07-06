@@ -1,5 +1,5 @@
 import React from "react";
-import { IResourceComponentsProps, BaseRecord } from "@refinedev/core";
+import {IResourceComponentsProps, BaseRecord, getDefaultFilter} from "@refinedev/core";
 import {
 	useTable,
 	List,
@@ -7,13 +7,13 @@ import {
 	ShowButton,
 	DeleteButton,
 	DateField,
-	CreateButton,
+	CreateButton, FilterDropdown,
 } from "@refinedev/antd";
-import { Table, Space } from "antd";
+import {Table, Space, Input} from "antd";
 import { UserAddOutlined } from "@ant-design/icons";
 
 export const CustomerList: React.FC<IResourceComponentsProps> = () => {
-	const { tableProps } = useTable({
+	const { tableProps, filters } = useTable({
 		syncWithLocation: true,
 	});
 
@@ -35,8 +35,22 @@ export const CustomerList: React.FC<IResourceComponentsProps> = () => {
 			)}
 		>
 			<Table {...tableProps} rowKey="id">
-				<Table.Column dataIndex="name" title="Nombre" />
-				<Table.Column dataIndex="lastName" title="Apellido" />
+				<Table.Column dataIndex="name" title="Nombre"
+					defaultFilteredValue={getDefaultFilter("name", filters, "eq")}
+					filterDropdown={(props) => (
+					  <FilterDropdown {...props}>
+						  <Input maxLength={40} style={{ width: "100%" }}/>
+					  </FilterDropdown>
+					)}
+				/>
+				<Table.Column dataIndex="lastName" title="Apellido"
+					defaultFilteredValue={getDefaultFilter("lastName", filters, "eq")}
+					filterDropdown={(props) => (
+					  <FilterDropdown {...props}>
+						  <Input maxLength={40} style={{ width: "100%" }}/>
+					  </FilterDropdown>
+					)}
+				/>
 				<Table.Column dataIndex="phone" title="Telefono" />
 				<Table.Column
 					dataIndex="date"

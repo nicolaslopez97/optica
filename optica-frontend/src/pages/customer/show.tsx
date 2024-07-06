@@ -106,24 +106,24 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 			<Row gutter={[32, 16]}>
 				<Col flex={1}>
 					<Title level={5}>O.D. Esf.</Title>
-					<Typography.Text>{record?.closeODEsf}</Typography.Text>
+					<Typography.Text>{record?.closeODEsf ? record?.closeODEsf : "-"}</Typography.Text>
 
 					<Title level={5}>O.I. Esf.</Title>
-					<Typography.Text>{record?.closeOIEsf}</Typography.Text>
+					<Typography.Text>{record?.closeOIEsf ? record?.closeOIEsf : "-"}</Typography.Text>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Cil</Title>
-					<Typography.Text>{record?.closeODCil}</Typography.Text>
+					<Typography.Text>{record?.closeODCil ? record?.closeODCil : "-"}</Typography.Text>
 
 					<Title level={5}>Cil</Title>
-					<Typography.Text>{record?.closeOICil}</Typography.Text>
+					<Typography.Text>{record?.closeOICil ? record?.closeOICil : "-"}</Typography.Text>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Ángulo</Title>
-					<Typography.Text>{record?.closeODAngle}</Typography.Text>
+					<Typography.Text>{record?.closeODAngle ? record?.closeODAngle : "-"}</Typography.Text>
 
 					<Title level={5}>Ángulo</Title>
-					<Typography.Text>{record?.closeOIAngle}</Typography.Text>
+					<Typography.Text>{record?.closeOIAngle ? record?.closeOIAngle : "-"}</Typography.Text>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Color</Title>
@@ -152,14 +152,14 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 					</Typography.Text>
 
 					<Title level={5}>DI Lejos</Title>
-					<Typography.Text>{record?.farBifocalDI}</Typography.Text>
+					<Typography.Text>{record?.farBifocalDI ? record?.farBifocalDI : "-"}</Typography.Text>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Altura</Title>
-					<Typography.Text>{record?.height}</Typography.Text>
+					<Typography.Text>{record?.height ? record?.height : "-"}</Typography.Text>
 
 					<Title level={5}>DI Cerca</Title>
-					<Typography.Text>{record?.closeBifocalDI}</Typography.Text>
+					<Typography.Text>{record?.closeBifocalDI ? record?.closeBifocalDI : "-"}</Typography.Text>
 				</Col>
 			</Row>
 			<Divider>Observaciones</Divider>

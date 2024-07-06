@@ -109,7 +109,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -118,7 +118,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -127,7 +127,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -141,7 +141,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -152,7 +152,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -161,7 +161,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -170,7 +170,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -188,7 +188,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -197,7 +197,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -206,7 +206,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -220,7 +220,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -231,7 +231,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -240,7 +240,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -249,7 +249,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -271,7 +271,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -282,7 +282,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -291,7 +291,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>

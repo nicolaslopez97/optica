@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 
 export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 	const { formProps, form, saveButtonProps } = useForm();
-
+	console.log(form.getFieldValue("farODEsf"))
 	return (
 		<Edit
 			breadcrumb={false}
@@ -55,7 +55,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 								onChange={(e) => {
 									const array =
 										e.currentTarget.value.split(" ");
-									for (var i = 0; i < array.length; i++) {
+									for (let i = 0; i < array.length; i++) {
 										array[i] =
 											array[i].charAt(0).toUpperCase() +
 											array[i].slice(1);
@@ -74,7 +74,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 								},
 							]}
 						>
-							<Input maxLength={40} />
+							<Input maxLength={40}/>
 						</Form.Item>
 					</Col>
 					<Col flex={2}>
@@ -148,7 +148,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -157,7 +157,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -166,7 +166,8 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
+
 							/>
 						</Form.Item>
 					</Col>
@@ -180,7 +181,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -191,7 +192,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -200,7 +201,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -209,7 +210,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -227,7 +228,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -236,7 +237,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -245,7 +246,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -259,7 +260,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -270,7 +271,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
@@ -279,16 +280,17 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
 							/>
 						</Form.Item>
 					</Col>
 					<Col span={5}>
-						<Form.Item label="Ángulo" name={["closeOIAngle"]}>
+						<Form.Item label="Ángulo" name={"closeOIAngle"}>
 							<InputNumber
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
+								precision={2}
+								addonBefore={formProps?.form?.getFieldValue("closeOIAngle")}
 							/>
 						</Form.Item>
 					</Col>
@@ -307,10 +309,8 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="Altura" name={["height"]}>
-							<InputNumber
+							<Input
 								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={3}
 							/>
 						</Form.Item>
 					</Col>
@@ -318,19 +318,17 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 				<Row gutter={[32, 16]}>
 					<Col flex={1}>
 						<Form.Item label="DI Lejos" name={["farBifocalDI"]}>
-							<InputNumber
+							<Input
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
 							/>
 						</Form.Item>
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="DI Cerca" name={["closeBifocalDI"]}>
-							<InputNumber
+							<Input
 								style={{ width: "100%" }}
 								defaultValue="0"
-								precision={3}
 							/>
 						</Form.Item>
 					</Col>

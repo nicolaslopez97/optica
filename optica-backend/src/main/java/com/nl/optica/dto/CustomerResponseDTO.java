@@ -35,13 +35,13 @@ public class CustomerResponseDTO {
     private String closeFrame;
     private String closeDI;
     private String bifocal;
-    private double height;
-    private double farBifocalDI;
-    private double closeBifocalDI;
+    private String height;
+    private String farBifocalDI;
+    private String closeBifocalDI;
     private String metallic;
     private String notes;
 
-    public CustomerResponseDTO(Long id, String name, String lastName, String phone, LocalDate date, LocalDate targetDate, String doctor, String healthCare, String healthCareId, double farODEsf,double farODCil, double farODAngle, double farOIEsf, double farOICil, double farOIAngle, String farColor, String farFrame, String farDI, double closeODEsf, double closeODCil, double closeODAngle, double closeOIEsf, double closeOICil, double closeOIAngle, String closeColor, String closeFrame, String closeDI, String bifocal, double height, double farBifocalDI, double closeBifocalDI, String metallic, String notes) {
+    public CustomerResponseDTO(Long id, String name, String lastName, String phone, LocalDate date, LocalDate targetDate, String doctor, String healthCare, String healthCareId, double farODEsf,double farODCil, double farODAngle, double farOIEsf, double farOICil, double farOIAngle, String farColor, String farFrame, String farDI, double closeODEsf, double closeODCil, double closeODAngle, double closeOIEsf, double closeOICil, double closeOIAngle, String closeColor, String closeFrame, String closeDI, String bifocal, String height, String farBifocalDI, String closeBifocalDI, String metallic, String notes) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
