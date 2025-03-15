@@ -1,7 +1,8 @@
 import React from "react";
 import { IResourceComponentsProps } from "@refinedev/core";
 import { Create, useForm } from "@refinedev/antd";
-import { Col, DatePicker, Divider, Form, Input, InputNumber, Row } from "antd";
+import {Col, DatePicker, Divider, Form, Input, Row} from "antd";
+import {CustomInputNumber} from "../../components/InputNumberCustom";
 
 export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 	const { formProps, saveButtonProps } = useForm();
@@ -106,29 +107,17 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 				<Row gutter={[32, 16]}>
 					<Col span={5}>
 						<Form.Item label="O.D. Esf." name={["farODEsf"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["farODCil"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Ángulo" name={["farODAngle"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col flex={1}>
@@ -138,40 +127,24 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="DI" name={["farDI"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 				</Row>
 				<Row gutter={[32, 16]}>
 					<Col span={5}>
 						<Form.Item label="O.I. Esf" name={["farOIEsf"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["farOICil"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Ángulo" name={["farOIAngle"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col span={9}>
@@ -185,29 +158,17 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 				<Row gutter={[32, 16]}>
 					<Col span={5}>
 						<Form.Item label="O.D. Esf." name={["closeODEsf"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["closeODCil"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Ángulo" name={["closeODAngle"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col flex={1}>
@@ -217,40 +178,24 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="DI" name={["closeDI"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 				</Row>
 				<Row gutter={[32, 16]}>
 					<Col span={5}>
 						<Form.Item label="O.I. Esf" name={["closeOIEsf"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["closeOICil"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Ángulo" name={["closeOIAngle"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber angle/>
 						</Form.Item>
 					</Col>
 					<Col span={9}>
@@ -268,31 +213,19 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="Altura" name={["height"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 				</Row>
 				<Row gutter={[32, 16]}>
 					<Col flex={1}>
 						<Form.Item label="DI Lejos" name={["farBifocalDI"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="DI Cerca" name={["closeBifocalDI"]}>
-							<InputNumber
-								style={{ width: "100%" }}
-								defaultValue="0"
-								precision={2}
-							/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 				</Row>

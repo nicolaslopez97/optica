@@ -3,6 +3,7 @@ import { IResourceComponentsProps, useShow } from "@refinedev/core";
 import { Show } from "@refinedev/antd";
 import { Card, Col, Divider, Row, Typography } from "antd";
 import dayjs from "dayjs";
+import {CustomNumberText} from "../../components/CustomNumberText";
 
 const { Title } = Typography;
 
@@ -64,24 +65,24 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 			<Row gutter={[32, 16]}>
 				<Col flex={1}>
 					<Title level={5}>O.D. Esf.</Title>
-					<Typography.Text>{record?.farODEsf}</Typography.Text>
+					<CustomNumberText value={record?.farODEsf}/>
 
 					<Title level={5}>O.I. Esf.</Title>
-					<Typography.Text>{record?.farOIEsf}</Typography.Text>
+					<CustomNumberText value={record?.farOIEsf}/>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Cil</Title>
-					<Typography.Text>{record?.farODCil}</Typography.Text>
+					<CustomNumberText value={record?.farODCil} angle/>
 
 					<Title level={5}>Cil</Title>
-					<Typography.Text>{record?.farOICil}</Typography.Text>
+					<CustomNumberText value={record?.farOICil} angle/>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Ángulo</Title>
-					<Typography.Text>{record?.farODAngle}</Typography.Text>
+					<CustomNumberText value={record?.farODAngle} angle/>
 
 					<Title level={5}>Ángulo</Title>
-					<Typography.Text>{record?.farOIAngle}</Typography.Text>
+					<CustomNumberText value={record?.farOIAngle} angle/>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Color</Title>
@@ -96,9 +97,7 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>DI</Title>
-					<Typography.Text>
-						{record?.farDI ? record.farDI : "-"}
-					</Typography.Text>
+					<CustomNumberText value={record?.farDI}/>
 				</Col>
 			</Row>
 
@@ -106,24 +105,24 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 			<Row gutter={[32, 16]}>
 				<Col flex={1}>
 					<Title level={5}>O.D. Esf.</Title>
-					<Typography.Text>{record?.closeODEsf ? record?.closeODEsf : "-"}</Typography.Text>
+                    <CustomNumberText value={record?.closeODEsf}/>
 
 					<Title level={5}>O.I. Esf.</Title>
-					<Typography.Text>{record?.closeOIEsf ? record?.closeOIEsf : "-"}</Typography.Text>
+					<CustomNumberText value={record?.closeOIEsf}/>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Cil</Title>
-					<Typography.Text>{record?.closeODCil ? record?.closeODCil : "-"}</Typography.Text>
+					<CustomNumberText value={record?.closeODCil} angle/>
 
 					<Title level={5}>Cil</Title>
-					<Typography.Text>{record?.closeOICil ? record?.closeOICil : "-"}</Typography.Text>
+					<CustomNumberText value={record?.closeOICil} angle/>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Ángulo</Title>
-					<Typography.Text>{record?.closeODAngle ? record?.closeODAngle : "-"}</Typography.Text>
+					<CustomNumberText value={record?.closeODAngle} angle/>
 
 					<Title level={5}>Ángulo</Title>
-					<Typography.Text>{record?.closeOIAngle ? record?.closeOIAngle : "-"}</Typography.Text>
+					<CustomNumberText value={record?.closeOIAngle} angle/>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Color</Title>
@@ -138,9 +137,7 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>DI</Title>
-					<Typography.Text>
-						{record?.closeDI ? record?.closeDI : "-"}
-					</Typography.Text>
+					<CustomNumberText value={record?.closeDI}/>
 				</Col>
 			</Row>
 			<Divider>Bifocal</Divider>
@@ -152,14 +149,14 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 					</Typography.Text>
 
 					<Title level={5}>DI Lejos</Title>
-					<Typography.Text>{record?.farBifocalDI ? record?.farBifocalDI : "-"}</Typography.Text>
+					<CustomNumberText value={record?.farBifocalDI}/>
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Altura</Title>
-					<Typography.Text>{record?.height ? record?.height : "-"}</Typography.Text>
+					<CustomNumberText value={record?.height}/>
 
 					<Title level={5}>DI Cerca</Title>
-					<Typography.Text>{record?.closeBifocalDI ? record?.closeBifocalDI : "-"}</Typography.Text>
+					<CustomNumberText value={record?.closeBifocalDI}/>
 				</Col>
 			</Row>
 			<Divider>Observaciones</Divider>
