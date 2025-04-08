@@ -9,7 +9,8 @@ interface CustomNumberTextProps {
 export const CustomNumberText:React.FC<CustomNumberTextProps> = ({value=0, angle=false}) => {
 
     return (
-        <Typography.Text>
-            {(value > 0 && !angle) ? `+${value}`: `${value}`}{angle ? "°": ""}
-        </Typography.Text>)
+        value ?
+            <Typography.Text>
+                {(value > 0 && !angle) ? `+${value}`: `${value}`}{angle ? "°": ""}
+            </Typography.Text> : <Typography.Text>-</Typography.Text>)
 }

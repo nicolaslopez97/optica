@@ -4,15 +4,12 @@ import com.nl.optica.dto.CustomerRequestDTO;
 import com.nl.optica.models.Customer;
 import com.nl.optica.repositories.CustomerRepository;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Map;
 
 @Service

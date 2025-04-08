@@ -252,19 +252,19 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="Altura" name={["height"]}>
-							<CustomInputNumber />
+							<Input />
 						</Form.Item>
 					</Col>
 				</Row>
 				<Row gutter={[32, 16]}>
 					<Col flex={1}>
 						<Form.Item label="DI Lejos" name={["farBifocalDI"]}>
-							<CustomInputNumber />
+							<Input />
 						</Form.Item>
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="DI Cerca" name={["closeBifocalDI"]}>
-							<CustomInputNumber />
+							<Input />
 						</Form.Item>
 					</Col>
 				</Row>

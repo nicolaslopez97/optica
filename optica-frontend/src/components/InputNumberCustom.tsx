@@ -10,7 +10,7 @@ interface CustomInputNumberProps {
 }
 
 export const CustomInputNumber: React.FC<CustomInputNumberProps> = (
-    {value, onChange, precision = 0, style = { width: "100%", textAlign: "right" }, angle = false}) => {
+    {value, onChange, precision = 2, style = { width: "100%", textAlign: "right" }, angle = false}) => {
     return (
         <InputNumber
             style={style}
@@ -19,7 +19,7 @@ export const CustomInputNumber: React.FC<CustomInputNumberProps> = (
             onChange={onChange}
             formatter={(val) => {
                 if (val === undefined || val === null) return "0°"; // Default case
-                const numericValue = Number(val);
+                const numericValue = Number(val.toString().replace(".00", ""));
                 return `${(numericValue > 0 && !angle)? "+" : ""}${numericValue}${angle ? "°": ""}`;
             }}
         />
