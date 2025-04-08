@@ -112,7 +112,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["farODCil"]}>
-							<CustomInputNumber angle/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
@@ -139,7 +139,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["farOICil"]}>
-							<CustomInputNumber angle/>
+							<CustomInputNumber/>
 						</Form.Item>
 					</Col>
 					<Col span={5}>
@@ -163,7 +163,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["closeODCil"]}>
-							<CustomInputNumber angle/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
@@ -190,7 +190,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["closeOICil"]}>
-							<CustomInputNumber angle/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>

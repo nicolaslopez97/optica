@@ -32,7 +32,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 								onChange={(e) => {
 									const array =
 										e.currentTarget.value.split(" ");
-									for (var i = 0; i < array.length; i++) {
+									for (let i = 0; i < array.length; i++) {
 										array[i] =
 											array[i].charAt(0).toUpperCase() +
 											array[i].slice(1);
@@ -151,7 +151,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["farODCil"]}>
-							<CustomInputNumber angle />
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
@@ -178,7 +178,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["farOICil"]}>
-							<CustomInputNumber angle/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
@@ -202,7 +202,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["closeODCil"]}>
-							<CustomInputNumber angle/>
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
@@ -229,7 +229,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col span={5}>
 						<Form.Item label="Cil" name={["closeOICil"]}>
-							<CustomInputNumber angle />
+							<CustomInputNumber />
 						</Form.Item>
 					</Col>
 					<Col span={5}>
