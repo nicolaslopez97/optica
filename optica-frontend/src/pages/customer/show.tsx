@@ -47,17 +47,17 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				<Col flex={5}>
 					<Title level={5}>Receta Dr</Title>
 					<Typography.Text>
-						{record?.doctor ? record?.doctor : "-"}
+						{record?.doctor ?? "-"}
 					</Typography.Text>
 
 					<Title level={5}>Obra Social</Title>
 					<Typography.Text>
-						{record?.healthCare ? record?.healthCare : "-"}
+						{record?.healthCare ?? "-"}
 					</Typography.Text>
 
 					<Title level={5}>Nro Afiliado</Title>
 					<Typography.Text>
-						{record?.healthCareId ? record?.healthCareId : "-"}
+						{record?.healthCareId ?? "-"}
 					</Typography.Text>
 				</Col>
 			</Row>
@@ -87,12 +87,12 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				<Col flex={1}>
 					<Title level={5}>Color</Title>
 					<Typography.Text>
-						{record?.farColor ? record?.farColor : "-"}
+						{record?.farColor ?? "-"}
 					</Typography.Text>
 
 					<Title level={5}>Armazón</Title>
 					<Typography.Text>
-						{record?.farFrame ? record?.farFrame : "-"}
+						{record?.farFrame ?? "-"}
 					</Typography.Text>
 				</Col>
 				<Col flex={1}>
@@ -127,12 +127,12 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				<Col flex={1}>
 					<Title level={5}>Color</Title>
 					<Typography.Text>
-						{record?.closeColor ? record?.closeColor : "-"}
+						{record?.closeColor ?? "-"}
 					</Typography.Text>
 
 					<Title level={5}>Armazón</Title>
 					<Typography.Text>
-						{record?.closeFrame ? record?.closeFrame : "-"}
+						{record?.closeFrame ?? "-"}
 					</Typography.Text>
 				</Col>
 				<Col flex={1}>
@@ -145,7 +145,7 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				<Col flex={1}>
 					<Title level={5}>Bifocal</Title>
 					<Typography.Text>
-						{record?.bifocal ? record?.bifocal : "-"}
+						{record?.bifocal ?? "-"}
 					</Typography.Text>
 
 					<Title level={5}>DI Lejos</Title>
@@ -153,7 +153,9 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				</Col>
 				<Col flex={1}>
 					<Title level={5}>Altura</Title>
-					<CustomNumberText value={record?.height}/>
+					<Typography.Text>
+						{record?.height ? record?.height+" mm" : "-"}
+					</Typography.Text>
 
 					<Title level={5}>DI Cerca</Title>
 					<CustomNumberText value={record?.closeBifocalDI}/>
@@ -164,13 +166,13 @@ export const CustomerShow: React.FC<IResourceComponentsProps> = () => {
 				<Col flex={1}>
 					<Title level={5}>Metalizado</Title>
 					<Typography.Text>
-						{record?.metallic ? record?.metallic : "-"}
+						{record?.metallic ?? "-"}
 					</Typography.Text>
 
 					<Title level={5}>Notes</Title>
 					<Card>
 						<Typography.Text>
-						{record?.notes ? record?.notes : ""}
+						{record?.notes ?? ""}
 					</Typography.Text>
 					</Card>
 				</Col>

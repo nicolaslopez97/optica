@@ -3,6 +3,7 @@ import { IResourceComponentsProps } from "@refinedev/core";
 import { Create, useForm } from "@refinedev/antd";
 import {Col, DatePicker, Divider, Form, Input, Row} from "antd";
 import {CustomInputNumber} from "../../components/InputNumberCustom";
+import {InputText} from "../../components/InputText";
 
 export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 	const { formProps, saveButtonProps } = useForm();
@@ -213,7 +214,7 @@ export const CustomerCreate: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="Altura" name={["height"]}>
-							<Input defaultValue={"0"}/>
+							<InputText suffix={"mm"} />
 						</Form.Item>
 					</Col>
 				</Row>

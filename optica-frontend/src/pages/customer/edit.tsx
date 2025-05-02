@@ -4,6 +4,7 @@ import { Edit, useForm } from "@refinedev/antd";
 import { Col, DatePicker, Divider, Form, Input, Row } from "antd";
 import dayjs from "dayjs";
 import {CustomInputNumber} from "../../components/InputNumberCustom";
+import {InputText} from "../../components/InputText";
 
 export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 	const { formProps, form, saveButtonProps } = useForm();
@@ -252,7 +253,7 @@ export const CustomerEdit: React.FC<IResourceComponentsProps> = () => {
 					</Col>
 					<Col flex={1}>
 						<Form.Item label="Altura" name={["height"]}>
-							<Input />
+							<InputText suffix={"mm"} />
 						</Form.Item>
 					</Col>
 				</Row>
